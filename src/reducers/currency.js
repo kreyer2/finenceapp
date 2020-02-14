@@ -6,6 +6,7 @@ const initialState = {
 };
 
 export const currencyReducer = (state = initialState, action) => {
+  //Function which filter data by object key name
   const filtered = (data, filters) => Object.keys(data)
     .filter(key => filters.includes(key))
     .reduce((obj, key) => {

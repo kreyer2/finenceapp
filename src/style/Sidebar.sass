@@ -1,10 +1,18 @@
 .sidebar
   .time-points
-    display: flex
-    flex-direction: column
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr 1fr 1fr 1fr
+    .time-point__wrapper
+      padding: 10px
+      border-bottom: 1px solid white
+      padding-left: 20px
+    .time-point__wrapper:last-child
+      border: none
     label
       display: flex
       justify-content: space-between
-      background: cadetblue
     input
       cursor: pointer
+      width: 25px
+      height: 25px

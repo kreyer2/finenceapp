@@ -8,26 +8,29 @@ html, body, ul
   font-family: 'Roboto', sans-serif
 
 body
+  color: black
   background: #d3d3d3
+  font-size: 20px
 
 .container-fluid
-  margin-left: 25%
-  margin-right: 25%
+  margin-left: 10%
+  margin-right: 10%
 
 .App
-  height: 100vh
+  height: 100%
   display: grid
-  grid-template-areas: "header header" "sidebar main"
-  grid-template-columns: 15% 1fr
-  grid-template-rows: 7% 1fr
-  grid-gap: 5px
+  grid-template-columns: 1fr 2fr
+  grid-template-rows: 1fr 2fr
   border: 2px solid #333
+  background: rgb(98,112,121)
+  background: linear-gradient(19deg, rgba(98,112,121,1) 0%, rgba(170,197,218,1) 46%, rgba(180,194,205,1) 100%)
 
 #header
-  grid-area: header
+  grid-area: 1 / 1 / 2 / 3
 
 #main
-  grid-area: main
+  grid-area: 2 / 2 / 2 / 2
 
 #sidebar
-  grid-area: sidebar
+  grid-area: 2 / 2 / 2 / 1
+

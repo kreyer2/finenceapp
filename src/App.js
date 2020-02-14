@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Sidebar from "./components/Sidebar";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Sidebar from "./components/Main/Sidebar";
 import { connect } from 'react-redux';
 import {getData} from "./actions/currency__action";
 
