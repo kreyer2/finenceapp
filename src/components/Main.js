@@ -1,52 +1,13 @@
 import React from "react";
+import Block from "./Block";
 
-export default function Main () {
+export default function Main ({data}) {
   return (
     <main className="main" id="main">
-      <div className="time-point__block">
-        <div className="date">
-          13.02.2020
-        </div>
-        <div className="rate">
-          0.93
-        </div>
-        <div className="result">
-          123 UAH
-        </div>
-      </div>
-      <div className="time-point__block">
-        <div className="date">
-          13.02.2020
-        </div>
-        <div className="rate">
-          0.93
-        </div>
-        <div className="result">
-          123 UAH
-        </div>
-      </div>
-      <div className="time-point__block">
-        <div className="date">
-          13.02.2020
-        </div>
-        <div className="rate">
-          0.93
-        </div>
-        <div className="result">
-          123 UAH
-        </div>
-      </div>
-      <div className="time-point__block">
-        <div className="date">
-          13.02.2020
-        </div>
-        <div className="rate">
-          0.93
-        </div>
-        <div className="result">
-          123 UAH
-        </div>
-      </div>
+      {Object.keys(data.data).map((item, key) => {
+        const elements = data.data[item];
+        return <Block {...elements} amount={data.amount} key={key}/>
+      })}
     </main>
   )
 }
